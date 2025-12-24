@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2025-12-24T17:59:03.710Z",
+  "exportedAt": "2025-12-24T18:33:10.273Z",
   "exportedBy": "git-service",
   "workflow": {
     "title": "My Workflow",
@@ -10,7 +10,7 @@
     "tags": [],
     "nodes": [
       {
-        "id": "node-1766599114461",
+        "id": "node-1766601155115",
         "type": "ai-agent",
         "name": "AI Agent",
         "parameters": {
@@ -21,14 +21,70 @@
           "options": {}
         },
         "position": {
-          "x": 583.3333333333333,
-          "y": 107.66666666666666
+          "x": 466.66666666666663,
+          "y": 173.66666666666666
+        },
+        "credentials": [],
+        "disabled": false
+      },
+      {
+        "id": "node-1766601159195",
+        "type": "anthropic",
+        "name": "Anthropic (Claude)",
+        "parameters": {
+          "model": "claude-3-5-sonnet-20241022",
+          "temperature": 0.7,
+          "maxTokens": 1024,
+          "enableMemory": false,
+          "sessionId": "default",
+          "authentication": "",
+          "systemPrompt": "You are a helpful AI assistant.",
+          "userMessage": ""
+        },
+        "position": {
+          "x": 765.3333333333333,
+          "y": 200.66666666666669
+        },
+        "credentials": [],
+        "disabled": false
+      },
+      {
+        "id": "node-1766601165026",
+        "type": "airtable-trigger",
+        "name": "Airtable Trigger",
+        "parameters": {
+          "name": "Airtable Trigger",
+          "triggerType": "polling",
+          "authentication": "",
+          "baseId": "",
+          "tableName": "",
+          "pollingInterval": 60,
+          "options": {}
+        },
+        "position": {
+          "x": 284,
+          "y": 164
         },
         "credentials": [],
         "disabled": false
       }
     ],
-    "connections": [],
+    "connections": [
+      {
+        "id": "node-1766601155115-node-1766601159195-1766601159195",
+        "sourceNodeId": "node-1766601155115",
+        "sourceOutput": "main",
+        "targetNodeId": "node-1766601159195",
+        "targetInput": "main"
+      },
+      {
+        "id": "node-1766601165026-node-1766601155115-1766601165027",
+        "sourceNodeId": "node-1766601165026",
+        "sourceOutput": "main",
+        "targetNodeId": "node-1766601155115",
+        "targetInput": "main"
+      }
+    ],
     "triggers": [],
     "settings": {
       "timezone": "UTC",
@@ -41,5 +97,5 @@
       "workflowId": "c19b51824d5315158c812426f6c950f77"
     }
   },
-  "checksum": "7538cdc0"
+  "checksum": "20a89dd5"
 }
