@@ -19,8 +19,8 @@
           "options": {}
         },
         "position": {
-          "x": 466.66666666666663,
-          "y": 173.66666666666666
+          "x": 534.9313963322548,
+          "y": 195.7523144996511
         },
         "credentials": [],
         "disabled": false
@@ -40,8 +40,8 @@
           "userMessage": ""
         },
         "position": {
-          "x": 979.9999999999999,
-          "y": -98.66666666666667
+          "x": 923.7796614886764,
+          "y": 145.07380597944905
         },
         "credentials": [],
         "disabled": false
@@ -83,6 +83,24 @@
         },
         "credentials": [],
         "disabled": false
+      },
+      {
+        "id": "node-1766613244329",
+        "type": "ai-agent",
+        "name": "AI Agent 2",
+        "parameters": {
+          "name": "AI Agent",
+          "systemPrompt": "You are a helpful AI assistant.",
+          "userMessage": "",
+          "maxIterations": 10,
+          "options": {}
+        },
+        "position": {
+          "x": 781.2617072699222,
+          "y": 227.47924265594713
+        },
+        "credentials": [],
+        "disabled": false
       }
     ],
     "connections": [
@@ -105,6 +123,13 @@
         "sourceNodeId": "node-1766606595588",
         "sourceOutput": "main",
         "targetNodeId": "node-1766601159195",
+        "targetInput": "main"
+      },
+      {
+        "id": "node-1766601155115-node-1766613244329-1766613244330",
+        "sourceNodeId": "node-1766601155115",
+        "sourceOutput": "main",
+        "targetNodeId": "node-1766613244329",
         "targetInput": "main"
       }
     ],
