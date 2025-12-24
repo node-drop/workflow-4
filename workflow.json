@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "exportedAt": "2025-12-24T17:59:03.710Z",
+  "exportedBy": "git-service",
+  "workflow": {
+    "title": "My Workflow",
+    "name": "My Workflow",
+    "description": null,
+    "category": null,
+    "tags": [],
+    "nodes": [
+      {
+        "id": "node-1766599114461",
+        "type": "ai-agent",
+        "name": "AI Agent",
+        "parameters": {
+          "name": "AI Agent",
+          "systemPrompt": "You are a helpful AI assistant.",
+          "userMessage": "",
+          "maxIterations": 10,
+          "options": {}
+        },
+        "position": {
+          "x": 583.3333333333333,
+          "y": 107.66666666666666
+        },
+        "credentials": [],
+        "disabled": false
+      }
+    ],
+    "connections": [],
+    "triggers": [],
+    "settings": {
+      "timezone": "UTC",
+      "saveExecutionProgress": true,
+      "saveDataErrorExecution": "all",
+      "saveDataSuccessExecution": "all",
+      "callerPolicy": "workflowsFromSameOwner"
+    },
+    "metadata": {
+      "workflowId": "c19b51824d5315158c812426f6c950f77"
+    }
+  },
+  "checksum": "7538cdc0"
+}
