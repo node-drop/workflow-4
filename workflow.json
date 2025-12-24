@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2025-12-24T20:04:05.049Z",
+  "exportedAt": "2025-12-24T20:12:29.836Z",
   "exportedBy": "git-service",
   "workflow": {
     "title": "My Workflow",
@@ -42,8 +42,46 @@
           "userMessage": ""
         },
         "position": {
-          "x": 681.3333333333331,
-          "y": 173.33333333333337
+          "x": 850.6666666666666,
+          "y": 123.33333333333334
+        },
+        "credentials": [],
+        "disabled": false
+      },
+      {
+        "id": "node-1766601165026",
+        "type": "airtable-trigger",
+        "name": "Airtable Trigger",
+        "parameters": {
+          "name": "Airtable Trigger",
+          "triggerType": "polling",
+          "authentication": "",
+          "baseId": "",
+          "tableName": "",
+          "pollingInterval": 60,
+          "options": {}
+        },
+        "position": {
+          "x": 284,
+          "y": 164
+        },
+        "credentials": [],
+        "disabled": false
+      },
+      {
+        "id": "node-1766606595588",
+        "type": "ai-agent",
+        "name": "AI Agent 1",
+        "parameters": {
+          "name": "AI Agent",
+          "systemPrompt": "You are a helpful AI assistant.",
+          "userMessage": "",
+          "maxIterations": 10,
+          "options": {}
+        },
+        "position": {
+          "x": 691.4088541666666,
+          "y": 175.500005086263
         },
         "credentials": [],
         "disabled": false
@@ -51,8 +89,22 @@
     ],
     "connections": [
       {
-        "id": "node-1766601155115-node-1766601159195-1766606638508",
+        "id": "node-1766601165026-node-1766601155115-1766601165027",
+        "sourceNodeId": "node-1766601165026",
+        "sourceOutput": "main",
+        "targetNodeId": "node-1766601155115",
+        "targetInput": "main"
+      },
+      {
+        "id": "node-1766601155115-node-1766606595588-1766606595590",
         "sourceNodeId": "node-1766601155115",
+        "sourceOutput": "main",
+        "targetNodeId": "node-1766606595588",
+        "targetInput": "main"
+      },
+      {
+        "id": "node-1766606595588-node-1766601159195-1766606595591",
+        "sourceNodeId": "node-1766606595588",
         "sourceOutput": "main",
         "targetNodeId": "node-1766601159195",
         "targetInput": "main"
@@ -68,8 +120,8 @@
     },
     "metadata": {
       "workflowId": "c19b51824d5315158c812426f6c950f77",
-      "updatedAt": "2025-12-24T20:04:05.049Z"
+      "updatedAt": "2025-12-24T20:12:29.836Z"
     }
   },
-  "checksum": "16646b86"
+  "checksum": "55cebc72"
 }
