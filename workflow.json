@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2025-12-24T19:58:23.365Z",
+  "exportedAt": "2025-12-24T20:03:28.487Z",
   "exportedBy": "git-service",
   "workflow": {
     "title": "My Workflow",
@@ -42,8 +42,8 @@
           "userMessage": ""
         },
         "position": {
-          "x": 736.6666666666666,
-          "y": 243.33333333333334
+          "x": 850.6666666666666,
+          "y": 123.33333333333334
         },
         "credentials": [],
         "disabled": false
@@ -67,21 +67,46 @@
         },
         "credentials": [],
         "disabled": false
+      },
+      {
+        "id": "node-1766606595588",
+        "type": "ai-agent",
+        "name": "AI Agent 1",
+        "parameters": {
+          "name": "AI Agent",
+          "systemPrompt": "You are a helpful AI assistant.",
+          "userMessage": "",
+          "maxIterations": 10,
+          "options": {}
+        },
+        "position": {
+          "x": 691.4088541666666,
+          "y": 175.500005086263
+        },
+        "credentials": [],
+        "disabled": false
       }
     ],
     "connections": [
-      {
-        "id": "node-1766601155115-node-1766601159195-1766601159195",
-        "sourceNodeId": "node-1766601155115",
-        "sourceOutput": "main",
-        "targetNodeId": "node-1766601159195",
-        "targetInput": "main"
-      },
       {
         "id": "node-1766601165026-node-1766601155115-1766601165027",
         "sourceNodeId": "node-1766601165026",
         "sourceOutput": "main",
         "targetNodeId": "node-1766601155115",
+        "targetInput": "main"
+      },
+      {
+        "id": "node-1766601155115-node-1766606595588-1766606595590",
+        "sourceNodeId": "node-1766601155115",
+        "sourceOutput": "main",
+        "targetNodeId": "node-1766606595588",
+        "targetInput": "main"
+      },
+      {
+        "id": "node-1766606595588-node-1766601159195-1766606595591",
+        "sourceNodeId": "node-1766606595588",
+        "sourceOutput": "main",
+        "targetNodeId": "node-1766601159195",
         "targetInput": "main"
       }
     ],
@@ -95,8 +120,8 @@
     },
     "metadata": {
       "workflowId": "c19b51824d5315158c812426f6c950f77",
-      "updatedAt": "2025-12-24T19:58:23.365Z"
+      "updatedAt": "2025-12-24T20:03:28.487Z"
     }
   },
-  "checksum": "327a018d"
+  "checksum": "55cebc72"
 }
