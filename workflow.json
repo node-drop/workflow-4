@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2025-12-24T19:01:53.474Z",
+  "exportedAt": "2025-12-24T19:58:23.365Z",
   "exportedBy": "git-service",
   "workflow": {
     "title": "My Workflow",
@@ -21,8 +21,8 @@
           "options": {}
         },
         "position": {
-          "x": 482,
-          "y": 67
+          "x": 466.66666666666663,
+          "y": 173.66666666666666
         },
         "credentials": [],
         "disabled": false
@@ -42,8 +42,8 @@
           "userMessage": ""
         },
         "position": {
-          "x": 682.6666666666666,
-          "y": 72.00000000000001
+          "x": 736.6666666666666,
+          "y": 243.33333333333334
         },
         "credentials": [],
         "disabled": false
@@ -95,8 +95,8 @@
     },
     "metadata": {
       "workflowId": "c19b51824d5315158c812426f6c950f77",
-      "updatedAt": "2025-12-24T19:01:53.474Z"
+      "updatedAt": "2025-12-24T19:58:23.365Z"
     }
   },
-  "checksum": "4f1d068c"
+  "checksum": "327a018d"
 }
