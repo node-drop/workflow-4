@@ -8,41 +8,137 @@
     "tags": [],
     "nodes": [
       {
-        "id": "node-1766654790876",
-        "type": "manual-trigger",
-        "name": "Manual Trigger",
+        "id": "node-1766601155115",
+        "type": "ai-agent",
+        "name": "AI Agent",
         "parameters": {
-          "description": "",
-          "allowCustomData": false,
-          "defaultData": "{}",
-          "validateData": true,
-          "maxDataSize": 1048576
+          "name": "AI Agent",
+          "systemPrompt": "You are a helpful AI assistant.",
+          "userMessage": "",
+          "maxIterations": 10,
+          "options": {}
         },
         "position": {
-          "x": 435.27757845886475,
-          "y": -13.92917222560833
+          "x": 534.9313963322548,
+          "y": 195.7523144996511
         },
         "credentials": [],
         "disabled": false
       },
       {
-        "id": "node-1766654797476",
-        "type": "http-request",
-        "name": "HTTP Request",
+        "id": "node-1766601159195",
+        "type": "anthropic",
+        "name": "Anthropic (Claude)",
         "parameters": {
-          "method": "GET",
-          "url": "",
-          "headers": {},
-          "body": "",
-          "timeout": 30000,
-          "followRedirects": true,
-          "maxRedirects": 5,
+          "model": "claude-3-5-sonnet-20241022",
+          "temperature": 0.7,
+          "maxTokens": 1024,
+          "enableMemory": false,
+          "sessionId": "default",
           "authentication": "",
-          "responseFormat": "dataOnly"
+          "systemPrompt": "You are a helpful AI assistant.",
+          "userMessage": ""
         },
         "position": {
-          "x": 785.4792167809612,
-          "y": -13.035800699276482
+          "x": 1017.5857648917914,
+          "y": 77.32076465882386
+        },
+        "credentials": [],
+        "disabled": false
+      },
+      {
+        "id": "node-1766601165026",
+        "type": "airtable-trigger",
+        "name": "Airtable Trigger",
+        "parameters": {
+          "name": "Airtable Trigger",
+          "triggerType": "polling",
+          "authentication": "",
+          "baseId": "",
+          "tableName": "",
+          "pollingInterval": 60,
+          "options": {}
+        },
+        "position": {
+          "x": 284,
+          "y": 164
+        },
+        "credentials": [],
+        "disabled": false
+      },
+      {
+        "id": "node-1766606595588",
+        "type": "ai-agent",
+        "name": "AI Agent 1",
+        "parameters": {
+          "name": "AI Agent",
+          "systemPrompt": "You are a helpful AI assistant.",
+          "userMessage": "",
+          "maxIterations": 10,
+          "options": {}
+        },
+        "position": {
+          "x": 766.6365830464387,
+          "y": -32.782430189434216
+        },
+        "credentials": [],
+        "disabled": false
+      },
+      {
+        "id": "node-1766613244329",
+        "type": "ai-agent",
+        "name": "AI Agent 2",
+        "parameters": {
+          "name": "AI Agent",
+          "systemPrompt": "You are a helpful AI assistant.",
+          "userMessage": "",
+          "maxIterations": 10,
+          "options": {}
+        },
+        "position": {
+          "x": 781.2617072699222,
+          "y": 227.47924265594713
+        },
+        "credentials": [],
+        "disabled": false
+      },
+      {
+        "id": "node-1766654483511",
+        "type": "github",
+        "name": "GitHub",
+        "parameters": {
+          "name": "GitHub",
+          "operation": "createIssue",
+          "authentication": "",
+          "owner": "",
+          "repo": "",
+          "title": "",
+          "body": "",
+          "labels": "",
+          "assignees": "",
+          "issueNumber": "",
+          "newTitle": "",
+          "newBody": "",
+          "state": "open",
+          "prTitle": "",
+          "prBody": "",
+          "headBranch": "",
+          "baseBranch": "main",
+          "prNumber": "",
+          "mergeMethod": "merge",
+          "tagName": "",
+          "releaseName": "",
+          "releaseNotes": "",
+          "isDraft": false,
+          "isPrerelease": false,
+          "commentBody": "",
+          "stateFilter": "open",
+          "limit": 30,
+          "options": {}
+        },
+        "position": {
+          "x": 438.91888075960856,
+          "y": 206.87620980889344
         },
         "credentials": [],
         "disabled": false
@@ -50,10 +146,38 @@
     ],
     "connections": [
       {
-        "id": "node-1766654790876-node-1766654797476-1766654797478",
-        "sourceNodeId": "node-1766654790876",
+        "id": "node-1766601155115-node-1766606595588-1766606595590",
+        "sourceNodeId": "node-1766601155115",
         "sourceOutput": "main",
-        "targetNodeId": "node-1766654797476",
+        "targetNodeId": "node-1766606595588",
+        "targetInput": "main"
+      },
+      {
+        "id": "node-1766606595588-node-1766601159195-1766606595591",
+        "sourceNodeId": "node-1766606595588",
+        "sourceOutput": "main",
+        "targetNodeId": "node-1766601159195",
+        "targetInput": "main"
+      },
+      {
+        "id": "node-1766601155115-node-1766613244329-1766613244330",
+        "sourceNodeId": "node-1766601155115",
+        "sourceOutput": "main",
+        "targetNodeId": "node-1766613244329",
+        "targetInput": "main"
+      },
+      {
+        "id": "node-1766601165026-node-1766654483511-1766654483513",
+        "sourceNodeId": "node-1766601165026",
+        "sourceOutput": "main",
+        "targetNodeId": "node-1766654483511",
+        "targetInput": "main"
+      },
+      {
+        "id": "node-1766654483511-node-1766601155115-1766654483514",
+        "sourceNodeId": "node-1766654483511",
+        "sourceOutput": "main",
+        "targetNodeId": "node-1766601155115",
         "targetInput": "main"
       }
     ],
