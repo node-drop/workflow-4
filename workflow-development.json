@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "workflow": {
+    "title": "My Workflow",
+    "name": "My Workflow",
+    "description": null,
+    "category": null,
+    "tags": [],
+    "nodes": [
+      {
+        "id": "node-1766654790876",
+        "type": "manual-trigger",
+        "name": "Manual Trigger",
+        "parameters": {
+          "description": "",
+          "allowCustomData": false,
+          "defaultData": "{}",
+          "validateData": true,
+          "maxDataSize": 1048576
+        },
+        "position": {
+          "x": 435.27757845886475,
+          "y": -13.92917222560833
+        },
+        "credentials": [],
+        "disabled": false
+      },
+      {
+        "id": "node-1766654797476",
+        "type": "http-request",
+        "name": "HTTP Request",
+        "parameters": {
+          "method": "GET",
+          "url": "",
+          "headers": {},
+          "body": "",
+          "timeout": 30000,
+          "followRedirects": true,
+          "maxRedirects": 5,
+          "authentication": "",
+          "responseFormat": "dataOnly"
+        },
+        "position": {
+          "x": 788.4792167809612,
+          "y": 100.46419930072352
+        },
+        "credentials": [],
+        "disabled": false
+      }
+    ],
+    "connections": [
+      {
+        "id": "node-1766654790876-node-1766654797476-1766654797478",
+        "sourceNodeId": "node-1766654790876",
+        "sourceOutput": "main",
+        "targetNodeId": "node-1766654797476",
+        "targetInput": "main"
+      }
+    ],
+    "triggers": [],
+    "settings": {
+      "timezone": "UTC",
+      "saveExecutionProgress": true,
+      "saveDataErrorExecution": "all",
+      "saveDataSuccessExecution": "all",
+      "callerPolicy": "workflowsFromSameOwner"
+    }
+  }
+}
